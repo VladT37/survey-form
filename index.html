@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="header">
+            <h1 id="title">Hotel Facility Survey Form</h1>
+            <p id="description">Thank you for using our hotel</p>
+        </div>
+
+        <div class="survey">
+          <form id="survey-form" action="index.html" method="post">
+            <p class="asterisk">*
+              <span id="optional" class="additional"> - required</span>
+            </p>
+            <div class="form-group">
+              <label id="name-label" for="name">Name
+              <span class="asterisk"> *</span>
+              </label>
+              <input id="name" class="form-control" type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <label id="email-label" for="email">Email
+              <span class="asterisk"> *</span>
+              </label>
+              <input id="email" class="form-control" type="email" name="email" placeholder="Enter your Email" required>
+            </div>
+
+            <div class="form-group">
+              <label id="number-label" for="room">Room
+              <span class="asterisk"> *</span>
+              </label>
+              <input id="number" class="form-control" type="number" name="room" min="1" max="999" placeholder="Room number" required>
+            </div>
+
+            <div class="form-group">
+              <p class="form-question">What type of room have you booked?
+              <span class="asterisk"> *</span>
+              </p>
+              <select id="dropdown" class="form-control" name="role" required>
+                <option disabled selected value>Select type</option>
+                <option value="regular">Regular</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="VIP">VIP</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <p class="form-question">Would you recommend our hotel to a friend?
+              <span class="asterisk"> *</span>
+              </p>
+              <label>
+                <input type="radio" name="user-recommend" value="yes" class="input-radio" checked>Yes
+              </label>
+              <label>
+                <input type="radio" name="user-recommend" value="no" class="input-radio">No
+              </label>
+              <label>
+                <input type="radio" name="user-recommend" value="notSure" class="input-radio">Not Sure
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="form-question">What was your favorite service?
+              <span class="additional">(Check all that apply)</span>
+              </p>
+              <label>
+                <input type="checkbox" name="user-improved" value="restaurant" class="input-checkbox">Restaurant
+              </label>
+              <label>
+                <input type="checkbox" name="user-improved" value="bar" class="input-checkbox">Bar
+              </label>
+              <label>
+                <input type="checkbox" name="user-improved" value="swimmingPool" class="input-checkbox">Swimming Pool
+              </label>
+              <label>
+                <input type="checkbox" name="user-improved" value="gym" class="input-checkbox">Gym
+              </label>
+              <label>
+                <input type="checkbox" name="user-improved" value="spa" class="input-checkbox">Spa
+              </label>
+              <label>
+                <input type="checkbox" name="user-improved" value="playground" class="input-checkbox">Playground
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="form-question">Any comments or suggestions?</p>
+              <textarea id="comment" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+              </label>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
